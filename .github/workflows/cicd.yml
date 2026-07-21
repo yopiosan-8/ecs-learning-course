@@ -10,4 +10,4 @@ jobs:
   goodbye-job:
     runs-on: ubuntu-latest
     steps:
-      - run: cho "Goodbye, GitHub Actions."
+      - run: echo "Goodbye, GitHub Actions."
