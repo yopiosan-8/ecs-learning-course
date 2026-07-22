@@ -31,7 +31,7 @@ jobs:
       - name: Run Tests and Build an Image
         run: docker image build -t temp_api_image:latest .
       
-      - name: Configure AWS credentials
+      - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
