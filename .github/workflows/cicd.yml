@@ -5,6 +5,7 @@ on:
       - '.github/workflows/**'
       - 'cicd-section/api/**'
 
+
 env:
   AWS_REGION: ap-northeast-1
   ECS_CLUSTER: watanabe-app-cluster
