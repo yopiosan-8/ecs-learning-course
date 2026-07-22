@@ -26,13 +26,16 @@ jobs:
     steps:
       # Checkout code
       - uses: actions/checkout@v4
+
       - name: Run Tests and Build an Image
         run: docker image build -t temp_api_image:latest .
+      
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
+      
       - name: Login to Amazon ECR
         id: login-ecr
         uses: aws-actions/amazon-ecr-login@v2
