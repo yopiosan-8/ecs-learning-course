@@ -10,7 +10,7 @@ env:
   ECS_CLUSTER: watanabe-app-cluster
   ECS_SERVICE: watanabe-app-api-service
   ECR_REPOSITORY: watanabe-app-api
-  ECS_TASK_DEFENITION_API: cicd-section/.aws/task-def-api.json
+  ECS_TASK_DEFINITION_API: cicd-section/.aws/task-def-api.json
 
 permissions:
   id-token: write
