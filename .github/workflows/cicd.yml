@@ -25,7 +25,7 @@ jobs:
         working-directory: cicd-section/api
     steps:
       # Checkout code
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Run Tests and Build an Image
         run: docker image build -t temp_api_image:latest .
