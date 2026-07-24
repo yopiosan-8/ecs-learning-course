@@ -31,11 +31,10 @@ jobs:
         run: docker image build -t temp_api_image:latest .
       
       - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v5
+        uses: aws-actions/configure-aws-credentials@v6
         with:
           aws-region: ${{ env.AWS_REGION }}
           role-to-assume: arn:aws:iam::233928981508:role/GitHubActionsEcsLearningCourseWatanabe
-          #role-to-assume: ${{ secrets.AWS_ROLE_TO_ASSUME }}
       
       - name: Login to Amazon ECR
         id: login-ecr
